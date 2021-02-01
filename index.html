@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="Kev G" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="css/img/me.png" />
+
+  <title>Mission</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.processed.min.css">
+  <link rel="shortcut icon" href="http://rs1017.pbsrc.com/albums/af297/iKP/Pixel%20Art/Isometric%20Pixel%20Art/SwanComputer_Assembled.png~c200">
+</head>
+<body>
+  <div id="app"></div>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    <script src="js/app.processed.min.js"></script>
+    <script>
+      function isTouchSupported() {
+          var msTouchEnabled = window.navigator.msMaxTouchPoints;
+          var generalTouchEnabled = "ontouchstart" in document.createElement("div");
+
+          if (msTouchEnabled || generalTouchEnabled) {
+              return true;
+          }
+          return false;
+      }
+      if(isTouchSupported()) {
+        document.body.classList.add('touch');
+      }
+    </script>
+</body>
+
+</html>
